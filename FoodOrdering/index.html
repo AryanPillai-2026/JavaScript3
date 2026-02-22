@@ -8,14 +8,70 @@
 <body>
     <div class="food-container">
         <a href="../index.html" class="nav-back">← Back to Hub</a>
-        <h2>Menu</h2>
-        <div>Pizza - $10 <button onclick="add('Pizza', 10)">Add</button></div>
-        <div>Burger - $7 <button onclick="add('Burger', 7)">Add</button></div>
-        <hr>
-        <div id="order-list"></div>
-        <p>Total: $<span id="f-total">0</span></p>
-        <input type="text" id="f-addr" placeholder="Address">
-        <button onclick="confirm()">Order Now</button>
+        
+        <div id="menu-view">
+            <h2>Our Menu</h2>
+            <div id="menu-items">
+                <h3>Starters</h3>
+                <div class="summary-box">
+                    <strong>Spring Rolls ($5)</strong>
+                    <p>Crispy veg-filled rolls served with sweet chili sauce.</p>
+                    <button onclick="add('Spring Rolls', 5)">Add to Order</button>
+                </div>
+                <div class="summary-box">
+                    <strong>Garlic Bread ($4)</strong>
+                    <p>Toasted baguette with herb butter and melted cheese.</p>
+                    <button onclick="add('Garlic Bread', 4)">Add to Order</button>
+                </div>
+
+                <h3>Main Course</h3>
+                <div class="summary-box">
+                    <strong>Margherita Pizza ($12)</strong>
+                    <p>Fresh basil, mozzarella, and tomato sauce on a thin crust.</p>
+                    <button onclick="add('Margherita Pizza', 12)">Add to Order</button>
+                </div>
+                <div class="summary-box">
+                    <strong>Penne Pasta ($10)</strong>
+                    <p>Penne in a creamy Alfredo sauce with sautéed mushrooms.</p>
+                    <button onclick="add('Penne Pasta', 10)">Add to Order</button>
+                </div>
+
+                <h3>Desserts</h3>
+                <div class="summary-box">
+                    <strong>Chocolate Brownie ($6)</strong>
+                    <p>Warm fudge brownie topped with a scoop of vanilla ice cream.</p>
+                    <button onclick="add('Chocolate Brownie', 6)">Add to Order</button>
+                </div>
+                <div class="summary-box">
+                    <strong>Fruit Tart ($5)</strong>
+                    <p>Sweet pastry shell with custard and seasonal fresh fruit.</p>
+                    <button onclick="add('Fruit Tart', 5)">Add to Order</button>
+                </div>
+            </div>
+
+            <div id="cart-section">
+                <h3>Current Order</h3>
+                <div id="order-list"></div>
+                <p><strong>Total: $<span id="f-total">0</span></strong></p>
+                <button id="checkout-btn" onclick="showCheckout()" style="display:none;">Proceed to Checkout</button>
+            </div>
+        </div>
+
+        <div id="checkout-view" class="hidden">
+            <h2>Delivery Details</h2>
+            <input type="text" id="f-name" placeholder="Full Name">
+            <textarea id="f-addr" placeholder="Delivery Address"></textarea>
+            <input type="text" id="f-phone" placeholder="Phone Number">
+            <input type="email" id="f-email" placeholder="Email ID">
+            <button onclick="confirmOrder()">Confirm & Place Order</button>
+            <button onclick="hideCheckout()" style="background:#666; margin-top:10px;">Modify Order</button>
+        </div>
+
+        <div id="receipt-view" class="hidden">
+            <h2>Final Order Receipt</h2>
+            <div id="receipt-details" class="summary-box"></div>
+            <button onclick="location.reload()">Place New Order</button>
+        </div>
     </div>
     <script src="script.js"></script>
 </body>
