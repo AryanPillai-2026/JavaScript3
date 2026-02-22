@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Food Ordering</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="food-container">
+        <a href="../index.html" class="nav-back">← Back to Hub</a>
+        <h2>Menu</h2>
+        <div>Pizza - $10 <button onclick="add('Pizza', 10)">Add</button></div>
+        <div>Burger - $7 <button onclick="add('Burger', 7)">Add</button></div>
+        <hr>
+        <div id="order-list"></div>
+        <p>Total: $<span id="f-total">0</span></p>
+        <input type="text" id="f-addr" placeholder="Address">
+        <button onclick="confirm()">Order Now</button>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

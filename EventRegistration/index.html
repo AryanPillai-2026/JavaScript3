@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Event Registration</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="event-app">
+        <a href="../index.html" class="nav-back">← Back to Hub</a>
+        <h2>Events</h2>
+        <input type="checkbox" class="ev" data-p="50" value="Tech Seminar"> Tech Seminar ($50)<br>
+        <input type="checkbox" class="ev" data-p="30" value="Web Workshop"> Web Workshop ($30)<br>
+        <hr>
+        <input type="text" id="r-name" placeholder="Name">
+        <input type="number" id="r-count" placeholder="Participants">
+        <button onclick="register()">Register</button>
+        <div id="reg-summary" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

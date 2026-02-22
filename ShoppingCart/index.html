@@ -1,1 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Shopping Cart</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="shop-container">
+        <a href="../index.html" class="nav-back">← Back to Hub</a>
+        
+        <div id="shop-view">
+            <h2>Products</h2>
+            <div id="p-list">
+                <div class="summary-box">
+                    <img src="https://via.placeholder.com/50" alt="Laptop">
+                    <p>Laptop - $1000</p>
+                    <button onclick="add(1000, 'Laptop')">Add to Cart</button>
+                </div>
+                <div class="summary-box">
+                    <img src="https://via.placeholder.com/50" alt="Phone">
+                    <p>Smartphone - $500</p>
+                    <button onclick="add(500, 'Smartphone')">Add to Cart</button>
+                </div>
+            </div>
+            <h3>Your Cart</h3>
+            <div id="cart-content"></div>
+            <p>Total: $<span id="cart-total">0</span></p>
+            <button id="checkout-btn" onclick="showCheckout()" style="display:none;">Proceed to Checkout</button>
+        </div>
 
+        <div id="checkout-view" class="hidden">
+            <h2>Checkout</h2>
+            <input type="text" id="u-name" placeholder="Username">
+            <textarea id="u-addr" placeholder="Shipping Address"></textarea>
+            <input type="text" id="u-phone" placeholder="Phone Number">
+            <input type="email" id="u-email" placeholder="Email ID">
+            <button onclick="processCheckout()">Confirm Order</button>
+            <button onclick="hideCheckout()" style="background:#666; margin-top:10px;">Back to Cart</button>
+        </div>
+
+        <div id="order-summary-view" class="hidden">
+            <h2>Order Summary</h2>
+            <div id="summary-details" class="summary-box"></div>
+            <button onclick="location.reload()">New Order</button>
+        </div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

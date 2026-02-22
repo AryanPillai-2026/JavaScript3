@@ -1,1 +1,22 @@
-
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Course Enrollment</title>
+    <link rel="stylesheet" href="../style.css">
+</head>
+<body>
+    <div class="enroll-container">
+        <a href="../index.html" class="nav-back">← Back to Hub</a>
+        <h2>Enrollment</h2>
+        <input type="text" id="s-name" placeholder="Student Name">
+        <input type="text" id="s-id" placeholder="Reg ID">
+        <hr>
+        <input type="checkbox" class="crs" value="200"> Python ($200)<br>
+        <input type="checkbox" class="crs" value="300"> Java ($300)<br>
+        <button onclick="enroll()">Enroll</button>
+        <div id="final-msg" class="hidden"></div>
+    </div>
+    <script src="script.js"></script>
+</body>
+</html>

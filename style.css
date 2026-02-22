@@ -1,0 +1,105 @@
+body { 
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif; 
+    line-height: 1.6; 
+    background-color: #f0f2f5;
+    margin: 0;
+    padding: 40px 20px;
+    color: #333;
+}
+
+.container, .shop-container, .event-app, .food-container, .enroll-container {
+    max-width: 650px;
+    margin: 0 auto;
+    background: white;
+    padding: 30px;
+    border-radius: 12px;
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+h2, h3 {
+    color: #1a1a1a;
+    border-bottom: 2px solid #eee;
+    padding-bottom: 10px;
+    margin-top: 0;
+}
+
+/* Form Inputs & Elements */
+input, textarea, select { 
+    display: block;
+    width: 100%;
+    border: 1px solid #dcdfe6; 
+    border-radius: 8px; 
+    padding: 12px; 
+    margin-bottom: 15px; 
+    box-sizing: border-box;
+    font-size: 15px;
+    transition: border-color 0.2s;
+}
+
+input:focus {
+    outline: none;
+    border-color: #007bff;
+}
+
+/* Buttons */
+button { 
+    background: #007bff; 
+    color: white; 
+    border: none; 
+    padding: 14px 20px; 
+    border-radius: 8px; 
+    cursor: pointer; 
+    font-weight: 600;
+    width: 100%;
+    font-size: 16px;
+    transition: background 0.2s; 
+}
+
+button:hover { 
+    background: #0056b3; 
+}
+
+/* Seat Grid & Layouts */
+.seating-grid {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    gap: 12px;
+    margin: 25px 0;
+    justify-items: center;
+}
+
+.seat {
+    width: 40px;
+    height: 40px;
+    background: #e4e7ed;
+    border-radius: 6px;
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 12px;
+    transition: 0.2s;
+}
+
+.seat.selected { background: #67c23a; color: white; }
+.seat.booked { background: #f56c6c; cursor: not-allowed; opacity: 0.6; }
+
+/* Cart and Summary Boxes */
+.summary-box, #reg-summary, #final-msg {
+    background: #fdfdfd;
+    padding: 20px;
+    border-radius: 8px;
+    margin-top: 20px;
+    border: 1px dashed #007bff;
+}
+
+/* Navigation Link */
+.nav-back {
+    display: inline-block;
+    margin-bottom: 20px;
+    text-decoration: none;
+    color: #007bff;
+    font-weight: 500;
+}
+
+.hidden { display: none; }
